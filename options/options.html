@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src='jquery.js'></script>
+    <script src='jquery-ui.min.js'></script>
+    <script src='options.js'></script>
+    <link href="jquery-ui.min.css" rel="stylesheet">
+    <link href="options.css" rel="stylesheet">
+  </head>
+  <body>
+	<form id="options">
+	    <label><input type="checkbox" id="notifications"/>Показывать всплывающее информационное окно?</label>
+        <label>
+            Действие первой кнопки
+            <select id="button1Action">
+                <option value="">- Не отображать -</option>
+                <option value="next">Следующий трек</option>
+                <option value="pause">Приостановить</option>
+                <option value="prev">Предыдущий трек</option>
+                <option value="download">Скачать</option>
+                <option value="favorite">Добавить/Удалить</option>
+                <option value="mute">Без звука</option>
+            </select>
+        </label>
+        <label>
+            Действие второй кнопки
+            <select id="button2Action">
+                <option value="">- Не отображать -</option>
+                <option value="next">Следующий трек</option>
+                <option value="pause">Приостановить</option>
+                <option value="prev">Предыдущий трек</option>
+                <option value="download">Скачать</option>
+                <option value="favorite">Добавить/Удалить</option>
+                <option value="mute">Без звука</option>
+            </select>
+        </label>
+        <label>
+            Действие при нажатии на информационное окно
+            <select id="clickAction">
+                <option value="">- Ничего -</option>
+                <option value="activateTab">Активировать вкладку</option>
+                <option value="showOptions">Открыть настройки</option>
+            </select>
+        </label>
+        <label><input type="checkbox" id="showNextPrev" />Показывать название следующего и предыдущего трека?</label>
+        <label>
+            Действие если страница ВК не открыта
+            <select id="noTabAction">
+                <option value="">Ничего</option>
+                <option value="create">Создать вкладку</option>
+                <option value="ask">Спросить</option>
+            </select>
+        </label>
+        <label>
+            Адрес новой вкладки
+            <select id="newTabUrl">
+                <option value="http://vk.com/">Начальная страница</option>
+                <option value="http://vk.com/audio">Мои аудиозаписи</option>
+                <option value="http://vk.com/audio?act=feed">Обновления друзей</option>
+                <option value="http://vk.com/audio?act=recommendations">Рекоммендации</option>
+                <option value="http://vk.com/audio?act=popular">Популярное</option>
+                <option value="">Другой</option>
+            </select>
+            <table style="display: none;">
+                <tr><td style="width: 0.01%;">http://vk.com/</td><td><input id="newTabCustomUrl" value="" /></td></tr>
+            </table>
+        </label>
+        <label><input type="checkbox" id="newTabActive" />Активировать новую вкладку?</label>
+        <label><input type="checkbox" id="newTabPinned" />Открывать новую вкладку закреплённой?</label>
+	    <label><input type="checkbox" id="confirmDownload"/>Подтверждать загрузку файлов?</label>
+        <label><input type="checkbox" id="notifyDownloadComplete" />Уведомлять о завершении загрузки файла?</label>
+	    <input type="submit" value="Сохранить" />
+	</form>
+  </body>
+</html>
